@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { Suspense, useState, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { 
   Timer as TimerIcon, 
@@ -24,7 +24,7 @@ import { getStoredPrograms, getStoredQuestions, setActiveSession, getActiveSessi
 import { createPracticeSession } from '@/lib/randomizer';
 import { Program, Question, PracticeSession } from '@/types';
 
-export default function PracticePage() {
+function PracticePageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const defaultProgramSlug = searchParams.get('program') || 'mechanical-engineering';
@@ -763,5 +763,13 @@ export default function PracticePage() {
       )}
 
     </div>
+  );
+}
+
+export default function PracticePage() {
+  return (
+    <Suspense fallback={null}>
+      <PracticePageContent />
+    </Suspense>
   );
 }
