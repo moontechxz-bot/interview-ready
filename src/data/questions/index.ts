@@ -1,0 +1,31 @@
+import { Question } from '@/types';
+import { MECHANICAL_QUESTIONS } from './mechanical';
+import { DIGITAL_BUSINESS_QUESTIONS } from './digital-business';
+import { MUSIC_QUESTIONS } from './music';
+import { LOGISTICS_QUESTIONS } from './logistics';
+import { ACCOUNTING_QUESTIONS } from './accounting';
+import { NURSING_QUESTIONS } from './nursing';
+import { COMMUNICATION_ARTS_QUESTIONS } from './communication-arts';
+import { EARLY_CHILDHOOD_QUESTIONS } from './early-childhood';
+
+export const INITIAL_QUESTIONS: Question[] = [
+  ...MECHANICAL_QUESTIONS,
+  ...DIGITAL_BUSINESS_QUESTIONS,
+  ...MUSIC_QUESTIONS,
+  ...LOGISTICS_QUESTIONS,
+  ...ACCOUNTING_QUESTIONS,
+  ...NURSING_QUESTIONS,
+  ...COMMUNICATION_ARTS_QUESTIONS,
+  ...EARLY_CHILDHOOD_QUESTIONS,
+];
+
+export {
+  MECHANICAL_QUESTIONS,
+  DIGITAL_BUSINESS_QUESTIONS,
+  MUSIC_QUESTIONS,
+  LOGISTICS_QUESTIONS,
+  ACCOUNTING_QUESTIONS,
+  NURSING_QUESTIONS,
+  COMMUNICATION_ARTS_QUESTIONS,
+  EARLY_CHILDHOOD_QUESTIONS,
+};
