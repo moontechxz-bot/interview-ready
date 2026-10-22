@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.8.3",
     "@swc/helpers": "^0.5.23",
     "canvas-confetti": "^1.9.4",
     "lucide-react": "^1.61.0",
