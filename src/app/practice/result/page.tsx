@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { 
@@ -20,7 +20,7 @@ import { getStoredSessions, getStoredQuestions } from '@/lib/storage';
 import { PracticeSession, Question } from '@/types';
 import confetti from 'canvas-confetti';
 
-export default function PracticeResultPage() {
+function PracticeResultPageContent() {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get('session');
 
@@ -281,5 +281,13 @@ export default function PracticeResultPage() {
       </div>
 
     </div>
+  );
+}
+
+export default function PracticeResultPage() {
+  return (
+    <Suspense fallback={null}>
+      <PracticeResultPageContent />
+    </Suspense>
   );
 }
