@@ -1,0 +1,224 @@
+import { Program } from '@/types';
+
+export const INITIAL_PROGRAMS: Program[] = [
+  {
+    id: 'prog-mech',
+    slug: 'mechanical-engineering',
+    name: 'วิศวกรรมเครื่องกล',
+    degreeName: 'วิศวกรรมศาสตรบัณฑิต',
+    degreeShort: 'วศ.บ.',
+    facultyName: 'คณะวิศวกรรมศาสตร์',
+    majorName: 'สาขาวิชาวิศวกรรมเครื่องกล',
+    category: 'engineering',
+    categoryLabel: 'วิศวกรรมและเทคโนโลยี',
+    description: 'ศึกษาและฝึกฝนหลักการกลศาสตร์ อุณหพลศาสตร์ ระบบอัตโนมัติ หุ่นยนต์ พลังงานสะอาด และยานยนต์สมัยใหม่ เพื่อสร้างนวัตกรรมวิศวกรรมที่ขับเคลื่อนอุตสาหกรรม',
+    imagePath: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80',
+    questionCount: 50,
+    status: 'published',
+    suggestedPrepTips: [
+      'ทบทวนกฎของนิวตัน หลักการเทอร์โมไดนามิกส์ และหลักการกลศาสตร์พื้นฐาน',
+      'เตรียมตัวอธิบายโครงงานหรือสิ่งประดิษฐ์ทางวิทยาศาสตร์ที่เคยทำในช่วงมัธยมปลาย',
+      'ติดตามเทรนด์เทคโนโลยี เช่น รถยนต์ไฟฟ้า (EV) พลังงานไฮโดรเจน และ Industry 4.0',
+      'เน้นการสื่อสารด้วยเหตุผลเชิงตรรกะ และการแก้ปัญหาเฉพาะหน้าทางวิศวกรรม'
+    ],
+    sampleQuestionsPreview: [
+      'กฎของนิวตัน 3 ข้อมีอะไรบ้าง และประยุกต์ใช้อย่างไรในการออกแบบเครื่องกล?',
+      'รถยนต์ไฟฟ้า (EV) จะมาแทนที่รถยนต์เครื่องยนต์สันดาปภายใน (ICE) ทั้งหมดหรือไม่?',
+      'หากชิ้นส่วนที่คุณออกแบบคำนวณมาอย่างดี แต่เมื่อทดสอบจริงกลับหัก คุณจะทำอย่างไร?'
+    ],
+    createdAt: '2026-01-15T00:00:00Z',
+    updatedAt: '2026-01-15T00:00:00Z',
+  },
+  {
+    id: 'prog-biz',
+    slug: 'digital-business',
+    name: 'ธุรกิจดิจิทัล',
+    degreeName: 'บริหารธุรกิจบัณฑิต',
+    degreeShort: 'บธ.บ.',
+    facultyName: 'คณะบริหารธุรกิจ เศรษฐศาสตร์และการสื่อสาร',
+    majorName: 'สาขาวิชาธุรกิจดิจิทัล',
+    category: 'business',
+    categoryLabel: 'ธุรกิจและการจัดการ',
+    description: 'มุ่งเน้นการสร้างผู้ประกอบการดิจิทัล การตลาดออนไลน์ Data-Driven Marketing การบริหารแพลตฟอร์ม E-Commerce และการประยุกต์ใช้ AI ในโมเดลธุรกิจยุคใหม่',
+    imagePath: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+    questionCount: 50,
+    status: 'published',
+    suggestedPrepTips: [
+      'ทำความเข้าใจ Business Model Canvas (BMC) และ Sales Funnel',
+      'ศึกษาแนวโน้ม Social Commerce, TikTok Shop และการใช้ Generative AI ในธุรกิจ',
+      'เตรียมเล่าประสบการณ์เกี่ยวกับการทำช่องทางโซเชียล การขายของออนไลน์ หรือโครงงานธุรกิจ',
+      'ฝึกทักษะการวิเคราะห์ข้อมูลตัวเลขเพื่อการตัดสินใจทางธุรกิจ'
+    ],
+    sampleQuestionsPreview: [
+      'ธุรกิจดิจิทัล (Digital Business) ต่างจากธุรกิจแบบดั้งเดิมอย่างไร?',
+      'Generative AI จะเปลี่ยนวงการธุรกิจดิจิทัลและการทำการตลาดอย่างไร?',
+      'หากคุณมีงบประมาณ 10,000 บาท จะเริ่มทำธุรกิจดิจิทัลอะไรและมีแผนอย่างไร?'
+    ],
+    createdAt: '2026-01-15T00:00:00Z',
+    updatedAt: '2026-01-15T00:00:00Z',
+  },
+  {
+    id: 'prog-music',
+    slug: 'music',
+    name: 'ดุริยางคศาสตรบัณฑิต',
+    degreeName: 'ดุริยางคศาสตรบัณฑิต',
+    degreeShort: 'ดย.บ.',
+    facultyName: 'วิทยาลัยดุริยางคศิลป์',
+    majorName: 'หลักสูตรดุริยางคศาสตรบัณฑิต',
+    category: 'arts',
+    categoryLabel: 'ดนตรีและศิลปะ',
+    description: 'หลักสูตรวิชาชีพดนตรีสากลและดนตรีสร้างสรรค์ ครอบคลุมการแสดงดนตรี ทฤษฎีดนตรี การประพันธ์เพลง เทคโนโลยีดนตรี (Music Production) และอุตสาหกรรมดนตรี',
+    imagePath: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80',
+    questionCount: 50,
+    status: 'published',
+    suggestedPrepTips: [
+      'เตรียมเพลง Audition ที่แสดงศักยภาพทางเทคนิคและการสื่อสารอารมณ์ได้อย่างมั่นใจ',
+      'ทบทวนทฤษฎีดนตรี บันไดเสียง คอร์ด Time Signature และ Ear Training',
+      'ทำความเข้าใจเกี่ยวกับเทคโนโลยีบันทึกเสียง DAW และการบริหารลิขสิทธิ์เพลงในยุคสตรีมมิ่ง',
+      'ฝึกสมาธิ การหายใจ และการควบคุมความตื่นเต้นระหว่างการตอบสัมภาษณ์'
+    ],
+    sampleQuestionsPreview: [
+      'อธิบายความแตกต่างระหว่างบันไดเสียง เมเจอร์ (Major) และ ไมเนอร์ (Minor)?',
+      'AI ที่สร้างเพลงได้จะมาทดแทนนักดนตรีหรือไม่ และคุณมองบทบาทของศิลปินอย่างไร?',
+      'หากคุณตื่นเต้นมากขณะแสดง Audition คุณมีวิธีจัดการอารมณ์และสมาธิอย่างไร?'
+    ],
+    createdAt: '2026-01-15T00:00:00Z',
+    updatedAt: '2026-01-15T00:00:00Z',
+  },
+  {
+    id: 'prog-logistics',
+    slug: 'logistics-supply-chain',
+    name: 'โลจิสติกส์และดิจิทัลซัพพลายเชน',
+    degreeName: 'วิทยาศาสตรบัณฑิต',
+    degreeShort: 'วท.บ.',
+    facultyName: 'คณะโลจิสติกส์และดิจิทัลซัพพลายเชน',
+    majorName: 'สาขาวิชาโลจิสติกส์และดิจิทัลซัพพลายเชน',
+    category: 'engineering',
+    categoryLabel: 'วิศวกรรมและเทคโนโลยี',
+    description: 'เรียนรู้ระบบห่วงโซ่อุปทานอัจฉริยะ การบริหารคลังสินค้าอัตโนมัติ (Smart Warehouse) ระบบขนส่งต่อเนื่องหลายรูปแบบ และการนำเทคโนโลยี IoT, AI มาเพิ่มประสิทธิภาพการขนส่ง',
+    imagePath: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
+    questionCount: 50,
+    status: 'published',
+    suggestedPrepTips: [
+      'ทำความเข้าใจความแตกต่างระหว่าง Logistics และ Supply Chain รวมถึง 7 Rs of Logistics',
+      'ศึกษาเทคโนโลยีทันสมัย เช่น WMS, TMS, RFID, IoT และ Smart Warehouse',
+      'ทำความเข้าใจสถานการณ์ซัพพลายเชนโลก การจัดการความเสี่ยง (Bullwhip Effect)',
+      'เตรียมภาษาอังกฤษพื้นฐานและคำศัพท์เฉพาะทางโลจิสติกส์สากล'
+    ],
+    sampleQuestionsPreview: [
+      'โลจิสติกส์ (Logistics) และ ซัพพลายเชน (Supply Chain) ต่างกันอย่างไร?',
+      'Digital Twin ในซัพพลายเชนคืออะไร และช่วยลดต้นทุนการขนส่งได้อย่างไร?',
+      'หากเรือขนส่งสินค้าติดค้างเส้นทางหลัก ส่งผลกระทบต่อธุรกิจ คุณจะแก้ปัญหาอย่างไร?'
+    ],
+    createdAt: '2026-01-15T00:00:00Z',
+    updatedAt: '2026-01-15T00:00:00Z',
+  },
+  {
+    id: 'prog-acc',
+    slug: 'accounting',
+    name: 'บัญชีบัณฑิต',
+    degreeName: 'บัญชีบัณฑิต',
+    degreeShort: 'บช.บ.',
+    facultyName: 'คณะบริหารธุรกิจ เศรษฐศาสตร์และการสื่อสาร',
+    majorName: 'หลักสูตรบัญชีบัณฑิต',
+    category: 'business',
+    categoryLabel: 'ธุรกิจและการจัดการ',
+    description: 'ผลิตนักบัญชีมืออาชีพที่มีความเชี่ยวชาญการจัดทำงบการเงิน การวิเคราะห์ต้นทุน การตรวจสอบบัญชี ภาษีอากร ตลอดจนการประยุกต์ใช้ Cloud Accounting และ Data Analytics',
+    imagePath: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80',
+    questionCount: 50,
+    status: 'published',
+    suggestedPrepTips: [
+      'ทบทวนสมการบัญชี สินทรัพย์ = หนี้สิน + ทุน และการวิเคราะห์เดบิต/เครดิต',
+      'ทำความเข้าใจจรรยาบรรณวิชาชีพบัญชี (Integrity, Objectivity, Due Care)',
+      'ศึกษาเทรนด์ Cloud Accounting, Data Analytics, ESG Reporting และทิศทางนักบัญชีในยุคดิจิทัล',
+      'แสดงให้เห็นถึงความละเอียดรอบคอบ ความซื่อสัตย์ และตรรกะในการคิดวิเคราะห์'
+    ],
+    sampleQuestionsPreview: [
+      'สมการบัญชีคืออะไร และเชื่อมโยงกับงบแสดงฐานะการเงินอย่างไร?',
+      'AI จะมาทดแทนนักบัญชีหรือไม่ และนักบัญชีต้องปรับตัวสู่บทบาทที่ปรึกษาอย่างไร?',
+      'หากผู้บริหารสั่งให้คุณแต่งงบการเงินเพื่อลดภาระภาษี คุณจะรับมือและตัดสินใจอย่างไร?'
+    ],
+    createdAt: '2026-01-15T00:00:00Z',
+    updatedAt: '2026-01-15T00:00:00Z',
+  }
+];
+
+export const EXTENDED_PROGRAMS: Program[] = [
+  ...INITIAL_PROGRAMS,
+  {
+    id: 'prog-nursing',
+    slug: 'nursing',
+    name: 'พยาบาลศาสตรบัณฑิต',
+    degreeName: 'พยาบาลศาสตรบัณฑิต',
+    degreeShort: 'พย.บ.',
+    facultyName: 'คณะพยาบาลศาสตร์',
+    majorName: 'หลักสูตรพยาบาลศาสตรบัณฑิต',
+    category: 'health',
+    categoryLabel: 'พยาบาลและสาธารณสุข',
+    description: 'มุ่งเน้นการผลิตพยาบาลวิชาชีพที่มีความรู้ ความสามารถ จริยธรรม และจิตวิญญาณในการดูแลผู้ป่วยแบบองค์รวม (Holistic Care) ทั้งด้านกาย จิต อารมณ์ และสังคม',
+    imagePath: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
+    questionCount: 50,
+    status: 'published',
+    suggestedPrepTips: [
+      'เตรียม Storytelling เล่าประสบการณ์จริงที่จุดประกาย Passion และเจตคติต่อวิชาชีพพยาบาล',
+      'ทำความเข้าใจบทบาทพยาบาลในฐานะ Professional Partner ของทีมสหสาขาวิชาชีพ (MDT)',
+      'ทบทวนประเด็นจริยธรรม สิทธิผู้ป่วย (Patient Rights) และการจัดการภาวะวิقฤต/ความปลอดภัย'
+    ],
+    sampleQuestionsPreview: [
+      'ทำไมถึงอยากเรียนคณะพยาบาลศาสตร์ และอะไรคือจุดเปลี่ยนสำคัญที่ทำให้เลือกสายนี้?',
+      'สมมติว่าผู้ป่วยปฏิเสธการรับยาหรือการรักษาเนื่องจากความเชื่อส่วนตัว คุณจะทำอย่างไร?'
+    ],
+    createdAt: '2026-01-15T00:00:00Z',
+    updatedAt: '2026-01-15T00:00:00Z',
+  },
+  {
+    id: 'prog-comm-arts',
+    slug: 'communication-arts',
+    name: 'นิเทศศาสตรบัณฑิต',
+    degreeName: 'นิเทศศาสตรบัณฑิต',
+    degreeShort: 'นศ.บ.',
+    facultyName: 'คณะนิเทศศาสตร์',
+    majorName: 'หลักสูตรนิเทศศาสตรบัณฑิต',
+    category: 'communication',
+    categoryLabel: 'นิเทศศาสตร์และสื่อสารมวลชน',
+    description: 'พัฒนาทักษะการสื่อสารเชิงกลยุทธ์ การสร้างสรรค์คอนเทนต์ดิจิทัล Storytelling วารสารศาสตร์ยุคใหม่ การผลิตสื่อภาพยนตร์และสื่อผสม ตลอดจนจริยธรรมสื่อ',
+    imagePath: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=800&q=80',
+    questionCount: 50,
+    status: 'published',
+    suggestedPrepTips: [
+      'เตรียม Portfolio และพร้อมเล่ากระบวนการคิดเบื้องหลัง (Behind the Scenes)',
+      'ติดตามเทรนด์สื่อใหม่ Short-form Video (TikTok/Reels), Podcasting และ AI ในงานสื่อ'
+    ],
+    sampleQuestionsPreview: [
+      'ทำไมถึงอยากเรียนนิเทศศาสตร์ ในยุคที่ใครๆ ก็เป็น Creator หรือทำสื่อเองได้?',
+      'คุณมีมุมมองอย่างไรกับการนำ Generative AI มาใช้ในการสร้างสรรค์งานนิเทศศาสตร์?'
+    ],
+    createdAt: '2026-01-15T00:00:00Z',
+    updatedAt: '2026-01-15T00:00:00Z',
+  },
+  {
+    id: 'prog-early-childhood',
+    slug: 'early-childhood-education',
+    name: 'การศึกษาปฐมวัย',
+    degreeName: 'การศึกษาบัณฑิต',
+    degreeShort: 'กศ.บ.',
+    facultyName: 'คณะศึกษาศาสตร์',
+    majorName: 'สาขาวิชาการศึกษา (4 ปี) วิชาเอกปฐมวัย',
+    category: 'education',
+    categoryLabel: 'ครุศาสตร์และการศึกษา',
+    description: 'บ่มเพาะครูปฐมวัยมืออาชีพที่มีจิตวิญญาณความเป็นครู มีความเชี่ยวชาญด้านจิตวิทยาพัฒนาการเด็ก 0-6 ปี การเรียนรู้ผ่านการเล่น (Play-based Learning) และทักษะสมอง EF',
+    imagePath: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80',
+    questionCount: 50,
+    status: 'published',
+    suggestedPrepTips: [
+      'ทำความเข้าใจแนวคิดจิตวิทยาพัฒนาการเด็กช่วงวัย 0-6 ปี (Golden Years) และทักษะสมอง EF',
+      'ศึกษาหลักการ Play-based Learning และ Sensorial Play'
+    ],
+    sampleQuestionsPreview: [
+      'ทำไมถึงเลือกเรียนวิชาเอกปฐมวัย ในหลักสูตร 4 ปีนี้ และอะไรคือเสน่ห์ของเด็กวัย 0-6 ปี?',
+      'หากเด็กในห้องร้องไห้หนักมากไม่ยอมเข้าห้องเรียนในวันเปิดเทอมวันแรก คุณจะทำอย่างไร?'
+    ],
+    createdAt: '2026-01-15T00:00:00Z',
+    updatedAt: '2026-01-15T00:00:00Z',
+  }
+];
