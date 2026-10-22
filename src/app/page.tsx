@@ -113,12 +113,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. Featured 5 Programs Section */}
+      {/* 2. Featured 9 Programs Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
             <span className="text-xs font-bold tracking-wider uppercase text-[#F26A21]">CURRICULUM PROGRAMS</span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#111827]">หลักสูตรแนะนำทั้ง 5 สาขาวิชา</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#111827]">หลักสูตรแนะนำทั้ง 9 สาขาวิชา</h2>
             <p className="text-sm sm:text-base text-[#4B5563] mt-1">คัดสรรคลังคำถามตามเกณฑ์มาตรฐานการรับเข้าศึกษาของแต่ละสาขา</p>
           </div>
           <Link href="/programs">
