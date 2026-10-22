@@ -23,10 +23,10 @@ function assert(description, condition, details = '') {
   }
 }
 
-// 1. Verify 5 Programs
+// 1. Verify 5 Core Programs + 3 Extended Programs
 const programsFile = fs.readFileSync(path.join(rootDir, 'src/data/programs.ts'), 'utf8');
-const programsMatch = programsFile.match(/id:\s*'prog-([^']+)'/g) || [];
-const programSlugs = [
+
+const coreProgramSlugs = [
   'mechanical-engineering',
   'digital-business',
   'music',
@@ -34,31 +34,45 @@ const programSlugs = [
   'accounting'
 ];
 
-assert('Requirement: Exactly 5 Core Programs in Database', programSlugs.length === 5);
+const allProgramSlugs = [
+  ...coreProgramSlugs,
+  'primary-education',
+  'nursing',
+  'communication-arts'
+];
 
-for (const slug of programSlugs) {
-  assert(`Program Verified: ${slug}`, programsFile.includes(`slug: '${slug}'`));
+assert('Requirement: Exactly 5 Core Programs in INITIAL_PROGRAMS', coreProgramSlugs.length === 5);
+
+for (const slug of coreProgramSlugs) {
+  assert(`Core Program Verified: ${slug}`, programsFile.includes(`slug: '${slug}'`));
 }
 
-// 2. Verify 250 Questions (50 each)
+for (const slug of allProgramSlugs) {
+  assert(`All Curriculums Verified: ${slug}`, programsFile.includes(`slug: '${slug}'`));
+}
+
+// 2. Verify 400 Questions (50 for each of the 8 programs)
 const files = {
   'mechanical-engineering': 'src/data/questions/mechanical.ts',
   'digital-business': 'src/data/questions/digital-business.ts',
   'music': 'src/data/questions/music.ts',
   'logistics-supply-chain': 'src/data/questions/logistics.ts',
   'accounting': 'src/data/questions/accounting.ts',
+  'primary-education': 'src/data/questions/primary-education.ts',
+  'nursing': 'src/data/questions/nursing.ts',
+  'communication-arts': 'src/data/questions/communication-arts.ts',
 };
 
 let totalQuestions = 0;
 
 for (const [slug, relPath] of Object.entries(files)) {
   const content = fs.readFileSync(path.join(rootDir, relPath), 'utf8');
-  const count = (content.match(new RegExp(`programSlug:\\s*'${slug}'`, 'g')) || []).length;
+  const count = (content.match(new RegExp(`programSlug:\\s*['"]${slug}['"]`, 'g')) || []).length;
   totalQuestions += count;
   assert(`Curriculum Question Count: ${slug} has 50 questions`, count === 50, `Found: ${count}`);
 }
 
-assert('Requirement: Total Verified Question Bank is 250 Questions', totalQuestions === 250, `Total: ${totalQuestions}`);
+assert('Requirement: Total Verified Question Bank is 400 Questions (8 Programs x 50 Questions)', totalQuestions === 400, `Total: ${totalQuestions}`);
 
 // 3. Verify Database Schema and RLS
 const schemaFile = fs.readFileSync(path.join(rootDir, 'supabase/schema.sql'), 'utf8');

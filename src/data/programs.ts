@@ -197,6 +197,34 @@ export const EXTENDED_PROGRAMS: Program[] = [
     updatedAt: '2026-01-15T00:00:00Z',
   },
   {
+    id: 'prog-primary-edu',
+    slug: 'primary-education',
+    name: 'การศึกษาบัณฑิต วิชาเอกประถมศึกษา',
+    degreeName: 'การศึกษาบัณฑิต',
+    degreeShort: 'กศ.บ.',
+    facultyName: 'คณะศึกษาศาสตร์',
+    majorName: 'สาขาวิชาการประถมศึกษา',
+    category: 'education',
+    categoryLabel: 'ครุศาสตร์และการศึกษา',
+    description: 'ผลิตครูประถมศึกษาที่มีจิตวิญญาณความเป็นครู มีความเชี่ยวชาญด้านจิตวิทยาพัฒนาการเด็กประถม การจัดการเรียนรู้แบบบูรณาการ STEAM ทักษะสมอง EF และการวัดประเมินผลตามสภาพจริง',
+    imagePath: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80',
+    questionCount: 50,
+    status: 'published',
+    suggestedPrepTips: [
+      'ทำความเข้าใจจิตวิทยาพัฒนาการเด็กช่วงวัย 6-12 ปี (Concrete Operational Stage) และทักษะสมอง EF',
+      'ทบทวนแนวคิด Active Learning, STEAM Education, และการจัดการศึกษาแบบรวม (Inclusive Education)',
+      'เตรียมตัวอย่างและประสบการณ์จริงที่สะท้อนถึงความรักความเมตตา ความอดทน และจิตวิญญาณความเป็นครู',
+      'ฝึกตอบคำถามสถานการณ์จำลองในห้องเรียน เช่น เด็กไม่ตั้งใจเรียน หรือการรับมือข้อร้องเรียนจากผู้ปกครอง'
+    ],
+    sampleQuestionsPreview: [
+      'ทำไมถึงอยากเป็นครูประถมศึกษา ไม่ใช่ครูมัธยม?',
+      'คุณมีแนวทางบูรณาการ STEAM Education ในระดับประถมศึกษาอย่างไร?',
+      'หากเจอเด็กนักเรียนไม่ตั้งใจเรียน ก้าวร้าว หรือสมาธิสั้น คุณจะจัดการอย่างไร?'
+    ],
+    createdAt: '2026-01-15T00:00:00Z',
+    updatedAt: '2026-01-15T00:00:00Z',
+  },
+  {
     id: 'prog-early-childhood',
     slug: 'early-childhood-education',
     name: 'การศึกษาปฐมวัย',

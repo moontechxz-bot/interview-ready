@@ -30,6 +30,9 @@ export default function ProgramsPage() {
     { id: 'engineering', label: 'วิศวกรรมและเทคโนโลยี' },
     { id: 'business', label: 'ธุรกิจและการจัดการ' },
     { id: 'arts', label: 'ดนตรีและศิลปะ' },
+    { id: 'education', label: 'ครุศาสตร์และการศึกษา' },
+    { id: 'health', label: 'พยาบาลและสาธารณสุข' },
+    { id: 'communication', label: 'นิเทศศาสตร์และสื่อสารมวลชน' },
   ];
 
   const filteredPrograms = programs.filter((p) => {

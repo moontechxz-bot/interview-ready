@@ -1,27 +1,30 @@
 import { Program, Question, PracticeSession, AdminStats } from '@/types';
-import { INITIAL_PROGRAMS } from '@/data/programs';
-import { INITIAL_QUESTIONS } from '@/data/questions';
+import { INITIAL_PROGRAMS, EXTENDED_PROGRAMS } from '@/data/programs';
+import { INITIAL_QUESTIONS, EXTENDED_QUESTIONS } from '@/data/questions';
 
 const STORAGE_KEYS = {
-  PROGRAMS: 'interview_ready_programs_v2',
-  QUESTIONS: 'interview_ready_questions_v2',
+  PROGRAMS: 'interview_ready_programs_v3',
+  QUESTIONS: 'interview_ready_questions_v3',
   SESSIONS: 'interview_ready_sessions_v1',
   ACTIVE_SESSION: 'interview_ready_active_session_v1',
   ADMIN_AUTH: 'interview_ready_admin_auth_v1',
 };
 
+const SEED_PROGRAMS = EXTENDED_PROGRAMS;
+const SEED_QUESTIONS = EXTENDED_QUESTIONS;
+
 // --- Programs ---
 export function getStoredPrograms(): Program[] {
   if (typeof window === 'undefined') {
-    return INITIAL_PROGRAMS;
+    return SEED_PROGRAMS;
   }
   try {
     const raw = localStorage.getItem(STORAGE_KEYS.PROGRAMS);
     let parsed: Program[] = raw ? JSON.parse(raw) : [];
     
-    // Merge any missing initial programs
+    // Merge any missing seed programs
     const existingSlugs = new Set(parsed.map(p => p.slug));
-    const missing = INITIAL_PROGRAMS.filter(p => !existingSlugs.has(p.slug));
+    const missing = SEED_PROGRAMS.filter(p => !existingSlugs.has(p.slug));
     if (missing.length > 0 || !raw) {
       parsed = [...parsed, ...missing];
       saveStoredPrograms(parsed);
@@ -35,7 +38,7 @@ export function getStoredPrograms(): Program[] {
     }));
   } catch (err) {
     console.error('Failed to load programs from localStorage:', err);
-    return INITIAL_PROGRAMS;
+    return SEED_PROGRAMS;
   }
 }
 
@@ -52,15 +55,15 @@ export function getProgramBySlug(slug: string): Program | undefined {
 // --- Questions ---
 export function getStoredQuestions(): Question[] {
   if (typeof window === 'undefined') {
-    return INITIAL_QUESTIONS;
+    return SEED_QUESTIONS;
   }
   try {
     const raw = localStorage.getItem(STORAGE_KEYS.QUESTIONS);
     let parsed: Question[] = raw ? JSON.parse(raw) : [];
     
-    // Merge any missing initial questions
+    // Merge any missing seed questions
     const existingIds = new Set(parsed.map(q => q.id));
-    const missing = INITIAL_QUESTIONS.filter(q => !existingIds.has(q.id));
+    const missing = SEED_QUESTIONS.filter(q => !existingIds.has(q.id));
     if (missing.length > 0 || !raw) {
       parsed = [...parsed, ...missing];
       saveStoredQuestions(parsed);
@@ -68,7 +71,7 @@ export function getStoredQuestions(): Question[] {
     return parsed;
   } catch (err) {
     console.error('Failed to load questions from localStorage:', err);
-    return INITIAL_QUESTIONS;
+    return SEED_QUESTIONS;
   }
 }
 

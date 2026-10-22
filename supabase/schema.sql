@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS public.programs (
     degree_short VARCHAR(50),
     faculty_name VARCHAR(255) NOT NULL,
     major_name VARCHAR(255),
-    category VARCHAR(50) NOT NULL CHECK (category IN ('engineering', 'business', 'arts')),
+    category VARCHAR(50) NOT NULL CHECK (category IN ('engineering', 'business', 'arts', 'education', 'health', 'communication')),
     description TEXT NOT NULL,
     image_path TEXT,
     status VARCHAR(20) NOT NULL DEFAULT 'published' CHECK (status IN ('published', 'draft', 'archived')),
