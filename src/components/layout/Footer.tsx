@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link href="/programs" className="hover:text-[#F26A21] transition-colors flex items-center gap-1.5">
                   <BookOpen className="w-4 h-4 text-[#9CA3AF]" />
-                  <span>หลักสูตรทั้งหมด 5 สาขา</span>
+                  <span>หลักสูตรทั้งหมด 9 สาขา</span>
                 </Link>
               </li>
               <li>
